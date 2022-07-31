@@ -1,0 +1,15 @@
+button{
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.primary{
+    background: blue;
+    color: #fff;
+    &:hover{
+        background: red;
+        color: black;
+    }
+}
