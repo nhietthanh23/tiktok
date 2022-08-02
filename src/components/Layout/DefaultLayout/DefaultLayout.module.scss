@@ -4,7 +4,7 @@
     align-items: center;
 }
 .container {
-    width: (--default-layout-width);
+    width: var(--default-layout-width);
     display: flex;
     .content {
         flex: 1;
