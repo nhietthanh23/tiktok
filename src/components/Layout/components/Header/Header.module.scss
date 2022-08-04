@@ -1,4 +1,5 @@
 .wrapper {
+    --border-radius-button: 92px;
     width: 100%;
     height: var(--default-layout-header-height, 60px);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
@@ -8,6 +9,67 @@
         height: 100%;
         width: var(--default-layout-width);
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        .logo {
+        }
+        .search {
+            position: relative;
+            width: 361px;
+            height: 46px;
+            display: flex;
+            caret-color: rgba(254, 44, 85, 1);
+            padding-left: 16px;
+            background: rgba(22, 24, 35, 0.06);
+            border-radius: var(--border-radius-button);
+            border: 1.5px solid transparent;
+            &:focus-within {
+                border-color: rgba(22, 24, 35, 0.2);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                background: rgba(22, 24, 35, 0.12);
+                width: 1px;
+                height: 28px;
+                top: 9px;
+                right: 52px;
+            }
+            input {
+                flex: 1;
+                font-size: 1.6rem;
+                line-height: 22px;
+                background: transparent;
+                padding: 0;
+                color: #434343;
+                caret-color: rgba(254, 44, 85, 1);
+                &:not(:placeholder-shown) ~ .search-btn {
+                    color: rgba(22, 24, 35, 0.75);
+                }
+            }
+            .search-btn {
+                width: 52px;
+                height: 100%;
+                border-top-right-radius: var(--border-radius-button);
+                border-bottom-right-radius: var(--border-radius-button);
+                color: #a7a7ab;
+                font-size: 2rem;
+                cursor: pointer;
+                &:hover {
+                    background: rgba(22, 24, 35, 0.03);
+                }
+                &:active {
+                    background: rgba(22, 24, 35, 0.06);
+                }
+            }
+        }
+        .loading,
+        .clear {
+            position: absolute;
+            color: rgba(22, 24, 35, 0.34);
+            right: 65px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
