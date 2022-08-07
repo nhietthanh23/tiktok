@@ -4,7 +4,11 @@
 :root {
     --primary: #fe2c55;
     --color-black: #000;
-    --text-color: #16182380;
+    --color-white: #ffffff;
+    --text-color: #161823;
+    --black-primary: #161823bf;
+    --border-gray: #1618231f;
+    --bg-hover: rgba(22, 24, 35, 0.03);
     // Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
@@ -27,6 +31,7 @@ button,
 }
 a[href] {
     color: var(--text-color);
+    text-decoration: none;
 }
 body {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;

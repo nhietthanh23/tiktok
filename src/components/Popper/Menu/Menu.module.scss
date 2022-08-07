@@ -1,0 +1,18 @@
+.menu-list {
+    width: 224px;
+    .menu-item {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0;
+        width: 100%;
+        font-weight: 600;
+        padding: 11px 18px;
+        border-radius: 0;
+        &:hover {
+            background: var(--bg-hover);
+        }
+    }
+}
+.menu-popper {
+    padding-bottom: 8px;
+}
