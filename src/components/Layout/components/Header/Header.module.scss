@@ -15,76 +15,7 @@
     }
 }
 
-.search,
-.search-result {
-    width: 361px;
-}
-
-.search {
-    position: relative;
-    height: 46px;
-    display: flex;
-    caret-color: rgba(254, 44, 85, 1);
-    padding-left: 16px;
-    background: rgba(22, 24, 35, 0.06);
-    border-radius: var(--border-radius-button);
-    border: 1.5px solid transparent;
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.2);
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        background: rgba(22, 24, 35, 0.12);
-        width: 1px;
-        height: 28px;
-        top: 9px;
-        right: 52px;
-    }
-    input {
-        flex: 1;
-        font-size: 1.6rem;
-        line-height: 22px;
-        background: transparent;
-        padding: 0;
-        color: #434343;
-        caret-color: rgba(254, 44, 85, 1);
-        &:not(:placeholder-shown) ~ .search-btn {
-            color: rgba(22, 24, 35, 0.75);
-        }
-    }
-    .search-btn {
-        width: 52px;
-        height: 100%;
-        border-top-right-radius: var(--border-radius-button);
-        border-bottom-right-radius: var(--border-radius-button);
-        color: #a7a7ab;
-        font-size: 2rem;
-        cursor: pointer;
-        &:hover {
-            background: var(--bg-hover);
-        }
-        &:active {
-            background: rgba(22, 24, 35, 0.06);
-        }
-    }
-}
-.loading,
-.clear {
-    position: absolute;
-    color: rgba(22, 24, 35, 0.34);
-    right: 65px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.search-title {
-    height: 30px;
-    padding: 5px 12px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
-}
+// Actions
 .actions {
     display: flex;
     align-items: center;
@@ -94,5 +25,23 @@
     padding: 0 4px;
     font-size: 20px;
     background: transparent;
+    cursor: pointer;
+}
+
+.action-btn {
+    color: #161823;
+    background-color: transparent;
+    font-size: 20px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 12px;
     cursor: pointer;
 }
