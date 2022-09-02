@@ -32,6 +32,7 @@
         padding: 0;
         color: #434343;
         caret-color: rgba(254, 44, 85, 1);
+        font-family: var(--font-family);
         &:not(:placeholder-shown) ~ .search-btn {
             color: rgba(22, 24, 35, 0.75);
         }
@@ -44,6 +45,7 @@
         color: #a7a7ab;
         font-size: 2rem;
         cursor: pointer;
+        line-height: 100%;
         &:hover {
             background: var(--bg-hover);
         }
