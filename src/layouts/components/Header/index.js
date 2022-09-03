@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import {
     faPlus,
     faEllipsisVertical,
@@ -21,7 +21,7 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import { InboxIcon, SearchIcon, UploadIcon } from '~/components/Icons';
+import { InboxIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
@@ -99,7 +99,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={routesConfig.home}>
+                    <Link to={config.routes.home}>
                         <img src={images.logo} alt="tiktok" />
                     </Link>
                 </div>
